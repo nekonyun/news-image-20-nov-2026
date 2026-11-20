@@ -38,6 +38,7 @@ function copyEntry(): void {
   if (size !== sourceBytes.length) {
     throw new Error(`entry.png copy failed verification: size ${size} != source ${sourceBytes.length}`);
   }
+  console.log(`entry.png copied to ${dest} (${size} bytes, sha256 ${sha256(dest)})`);
 }
 
 copyEntry();
